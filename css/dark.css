@@ -1,0 +1,16 @@
+.darkbody{
+    background-color: #7f5a83;
+    background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);   
+}
+.darkheader
+{
+    color: wheat;
+}
+.darktoggle{
+    border:1px solid  wheat !important;
+}
+
+
+.darktext{
+    color: rgb(151, 151, 151);
+}
