@@ -1,11 +1,14 @@
 .header {
   width: 100%;
   padding: 0px 10px ;
-  height: 10%;
+  height: 10vh;
   font-family: 'Proza Libre', sans-serif;
+  z-index: 99;
+  position: relative;
 }
 
 .nav-bar {
+  position: absolute;
   height: 100%;
   width: 100%;
   display: flex;
@@ -13,3 +16,77 @@
   align-items: center;
 }
 
+
+.menu-button {
+  display: none;
+  width: 47px;
+  height: 47px;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+
+@media screen and (max-width: 720px) {
+   .menu-button{
+       display: block;
+   }
+   .onheader
+   {
+       display: none !important;
+   }
+   .header{
+     padding: 0;
+   }
+  }
+
+.menu-img {
+  width: 40px;
+  height: 40px;
+}
+
+.menu-img:active {
+  width: 47px;
+  height: 47px;
+}
+
+
+
+.hidden-menu
+{
+    height: 0vh;
+    opacity: 0;
+    pointer-events: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transition: all 200ms ease-in-out;
+    z-index: 99;
+}
+
+.not-hidden-menu{
+    opacity: 1;
+    pointer-events: all;
+    height: 10vh;
+}
+
+.logo{
+  width: auto;
+  /* margin-right: auto; */
+}
+
+.header-items
+{
+  width: 70vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-project
+{
+  list-style: none;
+  text-decoration: none;
+}

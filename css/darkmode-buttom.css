@@ -4,6 +4,7 @@
     height: 30px;
     position: relative;
     list-style: none;
+    z-index: 99;
   }
   
   
@@ -45,4 +46,10 @@
     .right{
         left: 44px;
         background-image: url(/img/moon.png);
+    }
+
+
+
+    .darkp{
+      color: wheat;
     }
