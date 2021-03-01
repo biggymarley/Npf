@@ -23,7 +23,7 @@
     .ball {
       background-color:transparent;
       background-size: 25px 25px;
-      background-image: url(/img/sun.png);
+      background-image: url(/Npf/img/sun.png);
       background-position: center;
       background-repeat: no-repeat;
       position: absolute;
@@ -45,7 +45,7 @@
 
     .right{
         left: 44px;
-        background-image: url(/img/moon.png);
+        background-image: url(/Npf/img/moon.png);
     }
 
 
