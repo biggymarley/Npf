@@ -1,6 +1,7 @@
 .section
 {
     padding: 0vw 5vw;
+
 }
 
 #fullpage{
@@ -38,4 +39,11 @@
 .link-and-line
 {
    width: 100%;
+}
+
+
+.contact{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }

@@ -5,6 +5,8 @@
     position: relative;
     list-style: none;
     z-index: 99;
+    font-size: large;
+    align-self: center;
   }
   
   

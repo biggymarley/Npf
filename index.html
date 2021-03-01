@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/Npf/css/dark.css" />
     <link rel="stylesheet" href="/Npf/css/darkmode-buttom.css" />
     <link rel="stylesheet" href="/Npf/css/fullpage.css" />
+    <link rel="stylesheet" href="/Npf/css/glass.css" />
     <link rel="stylesheet" href="/Npf/css/sections.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -26,24 +27,28 @@
     <header class="header ">
       <nav class="nav-bar">
         <section class="logo">
+          <a href="#Home">
           <h3 id="logoname">FARAGI Ayoub</h3>
+          </a>
         </section>
-        <section class="onheader header-items">
-          <li class="item-project">
-            <a href="#ok.html">
-              <span class="active-span">Projects</span>
-            </a>
-          </li>
-          <li class="item-project">
-            <a href="#">
-              <span class="active-span">About Me</span>
-            </a>
-          </li>
+        <ul id="menu" class="onheader header-items">
+          <!-- <ul class="onheader"> -->
+            <li class="item-project">
+              <a href="#Projects">
+                <span class="active-span">Projects</span>
+              </a>
+            </li>
+            <li class="item-project">
+              <a href="#Contactme">
+                <span class="active-span">About Me</span>
+              </a>
+            </li>
+          <!-- </ul> -->
           <li class="darkbutton-countainer">
             <input type="checkbox" class="toggle" value="Dark" />
             <div class="ball"></div>
           </li>
-        </section>
+        </ul>
 
         <button class="menu-button">
           <img class="menu-img" src="/Npf/img/lmenu.png" />
@@ -52,31 +57,43 @@
     </header>
     <div class="hidden-menu" data-checker="off">
       <li class="darkbutton-countainer">
+        <a href="#Projects">
+          <span class="active-span">Projects</span>
+        </a>
+      </li>
+      <li class="darkbutton-countainer">
+        <a href="#Contactme">
+          <span class="active-span">About Me</span>
+        </a>
+      </li>
+      <li class="darkbutton-countainer">
         <input type="checkbox" class="toggle" value="Dark" />
         <div class="ball"></div>
       </li>
     </div>
     <!-- /HEADER -->
     <div id="fullpage" >
-      <section class="section s1">
-          <h1 class="intro">
-             Hey, my name is Ayoub FARAGI
+      <section class="section s1" >
+        <div class="glass">
+          <h1 class="intro" >
+            Hey, my name is Ayoub FARAGI
           </h1>
           <h1 class="intro">
-             I am a Full stack Engineer
+            I am a Full stack Engineer
           </h1>
         </br></br></br></br></br></br></br></br></br>
-          <h1 class="intro">
-             - I'm a Fullstack Developer & Designer.
-          </h1>
-          <p>
-             I'm a student from 1337, a pretty cool computer science school from the 42 Network located in  Khouribga, Morocco.
-             I've always been drawn to the overlap between design and development. My skills are broad: from ux to design, front end to back end development.
-             Architecture matters to me. Things have to stay clean and simple, and with this in mind I take time creating modules and boilerplates, trying to bring some purity in my work.
-             I'm available for remote work - if you would like to build something together, get in touch?
-          </p>
+        <h1 class="intro">
+          - I'm a Fullstack Developer & Designer.
+        </h1>
+        <p>
+          I'm a student from 1337, a pretty cool computer science school from the 42 Network located in  Khouribga, Morocco.
+          I've always been drawn to the overlap between design and development. My skills are broad: from ux to design, front end to back end development.
+          Architecture matters to me. Things have to stay clean and simple, and with this in mind I take time creating modules and boilerplates, trying to bring some purity in my work.
+          I'm available for remote work - if you would like to build something together, get in touch?
+        </p>
+      </div>
       </section>
-      <section  class="section ">
+      <section  class="section" data-anchor="#Projects">
         <h1 class="intro" style="text-align: center;">
           - My Projects.
        </h1>
@@ -163,30 +180,33 @@
       </section>
           <section class="section">
             <div id="contactme">
-              <h1 id="intro">
+              <h1 class="intro">
                  - Contact Me.
               </h1>
+            </br></br></br></br>
+            <section class="contact">
               <li id="itemlists">
-                 <a href="https://github.com/biggymarley">
-                 <img id="logo" src="img/gitlogo.png" />
-                 </a>
+                <a href="https://github.com/biggymarley">
+                  <img id="logo" src="img/gitlogo.png" />
+                </a>
               </li>
               <li id="itemlists">
-                 <a href="https://www.linkedin.com/in/ayoub-faragi-89518a1b8/">
-                 <img id="logo" src="img/lnlogo.png" />
-                 </a>
+                <a href="https://www.linkedin.com/in/ayoub-faragi-89518a1b8/">
+                  <img id="logo" src="img/lnlogo.png" />
+                </a>
               </li>
               <li id="itemlists">
-                 <a href="mailto:afaragi@student.1337.ma">
-                 <img id="logo" src="img/send.png" />
-                 </a>
+                <a href="mailto:afaragi@student.1337.ma">
+                  <img id="logo" src="img/send.png" />
+                </a>
               </li>
+            </section>
            </div>
           </section>
     </div>
 
-    <script src="/Npf/js/fullpage.js"></script>
-    <script src="/Npf/js/fullpage.extensions.min.js"></script>
-    <script src="/Npf/js/index.js"></script>
+    <script src="/js/fullpage.js"></script>
+    <script src="/js/fullpage.extensions.min.js"></script>
+    <script src="/js/index.js"></script>
   </body>
 </html>

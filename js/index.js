@@ -8,8 +8,10 @@ const array_a = Array.from(a);
 const array_p = Array.from(p);
 const projectname = document.querySelectorAll(".project");
 const line = document.querySelectorAll(".line");
-const header =  document.querySelector(".header");
+const header =  document.querySelector("#logoname");
 const ball = document.querySelectorAll('.ball');
+const intro = document.querySelectorAll('.intro');
+const contactme = document.querySelector('.contact');
 let darkmode = localStorage.getItem("mode");
 
 const apply_mode = () => {
@@ -25,7 +27,9 @@ const apply_mode = () => {
 const dark = () => {
    background.classList.add("darkbody");
    header.classList.add("darkheader");
+   contactme.classList.add("darkcontact");
    projectname.forEach((e) => {e.classList.add("darkprojectname")});
+   intro.forEach((e) => {e.classList.add("darkintro")});
    line.forEach((e) => {e.classList.add("darkline")});
    array_a.forEach((e) => {e.classList.add("darktext")});
    array_p.forEach((e) => {e.classList.add("darktext")});
@@ -40,12 +44,14 @@ const dark = () => {
 
 const light = () => {
   projectname.forEach((e) => {e.classList.remove("darkprojectname")});
+  intro.forEach((e) => {e.classList.remove("darkintro")});
   background.classList.remove("darkbody");
   line.forEach((e) => {e.classList.remove("darkline")});
   array_a.forEach((e) => {e.classList.remove("darktext")});
   header.classList.remove("darkheader");
   array_p.forEach((e) => {e.classList.remove("darktext")});
   button.forEach((e) => {e.classList.remove("darktoggle")});
+  contactme.classList.remove("darkcontact");
   ball.forEach((e) => {
     e.classList.remove("right");
 }) 
@@ -117,6 +123,8 @@ media.addListener(mediachecker);
 
 
 const allsections = new fullpage('#fullpage', {
+  menu: '#menu',
+  anchors:['Home', 'Projects', 'Contactme'],
   autoScrolling:true,
   paddingTop: '10vh',
   paddingBottom: '10vh',
