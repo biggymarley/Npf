@@ -12,7 +12,10 @@ const header =  document.querySelector("#logoname");
 const ball = document.querySelectorAll('.ball');
 const intro = document.querySelectorAll('.intro');
 const contactme = document.querySelector('.contact');
-// const 
+const navslid = document.querySelectorAll(" .fp-slidesNav > ul > li > a > span");
+// if(navslid)
+const array_nav = Array.from(navslid);
+console.log(navslid);
 let darkmode = localStorage.getItem("mode");
 
 const apply_mode = () => {
@@ -25,10 +28,11 @@ const apply_mode = () => {
   }
 };
 
-const dark = () => {
+ const dark = () => {
    background.classList.add("darkbody");
    header.classList.add("darkheader");
    contactme.classList.add("darkcontact");
+   navslid.forEach((e) => {e.classList.add("darknav")});
    projectname.forEach((e) => {e.classList.add("darkprojectname")});
    intro.forEach((e) => {e.classList.add("darkintro")});
    line.forEach((e) => {e.classList.add("darkline")});
@@ -44,6 +48,7 @@ const dark = () => {
 };
 
 const light = () => {
+  navslid.forEach((e) => {e.classList.remove("darknav")});
   projectname.forEach((e) => {e.classList.remove("darkprojectname")});
   intro.forEach((e) => {e.classList.remove("darkintro")});
   background.classList.remove("darkbody");
