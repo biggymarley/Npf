@@ -12,6 +12,7 @@ const header =  document.querySelector("#logoname");
 const ball = document.querySelectorAll('.ball');
 const intro = document.querySelectorAll('.intro');
 const contactme = document.querySelector('.contact');
+// const 
 let darkmode = localStorage.getItem("mode");
 
 const apply_mode = () => {
@@ -126,17 +127,18 @@ const allsections = new fullpage('#fullpage', {
   menu: '#menu',
   anchors:['Home', 'Projects', 'Contactme'],
   autoScrolling:true,
-  paddingTop: '10vh',
-  paddingBottom: '10vh',
+  paddingTop: '100px',
+  // paddingBottom: '100px',
   controlArrows: true,
-  // verticalCentered: true,
   navigation: true,
+  animateAnchor: true,
   // verticalCentered: true,
   // keyboardScrolling: true,
   // scrollOverflowReset: true,
-  // scrollHorizontally: true,
+  scrollHorizontally: true,
+  controlArrows: false,
   // responsiveHeight: true,
-  // slidesNavigation: true,
+  slidesNavigation: true,
   // slidesNavPosition: "bottom",
   // fitToSection: true,
   // anchors:['index.html', 'ok.html'],

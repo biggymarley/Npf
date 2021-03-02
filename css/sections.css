@@ -1,7 +1,25 @@
 .section
 {
     padding: 0vw 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    position: relative;
 
+}
+.fp-slidesNav.fp-bottom{
+    bottom: 117px;
+}
+
+.fp-slidesNav{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    left: 1 !important;
+    right: 1 !important;
 }
 
 #fullpage{

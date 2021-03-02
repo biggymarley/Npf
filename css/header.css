@@ -1,7 +1,7 @@
 .header {
   width: 100%;
   padding: 0px 10px ;
-  height: 10vh;
+  height: 100px;
   font-family: 'Proza Libre', sans-serif;
   z-index: 99;
   position: relative;
@@ -41,6 +41,12 @@
    .nav-bar{
      padding: 0 10;
    }
+   p{
+     font-size:medium;
+   }
+   .intro{
+     font-size: large;
+   }
   }
 
 .menu-img {
@@ -73,7 +79,7 @@
 .not-hidden-menu{
     opacity: 1;
     pointer-events: all;
-    height: 10vh;
+    height: 100px;
 }
 
 .logo{
