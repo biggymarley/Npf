@@ -1,8 +1,8 @@
 .header {
   width: 100%;
-  padding: 0px 10px ;
+  padding: 0px 10px;
   height: 100px;
-  font-family: 'Proza Libre', sans-serif;
+  font-family: "Proza Libre", sans-serif;
   z-index: 99;
   position: relative;
 }
@@ -16,7 +16,6 @@
   align-items: center;
 }
 
-
 .menu-button {
   display: none;
   width: 47px;
@@ -26,28 +25,50 @@
   outline: none;
 }
 
+@media screen and (max-width: 1020px) {
+  .p {
+    font-size: medium;
+  }
+  .project {
+    font-size: large;
+  }
+  .intro {
+    font-size: large;
+  }
+}
 
 @media screen and (max-width: 720px) {
-   .menu-button{
-       display: block;
-   }
-   .onheader
-   {
-       display: none !important;
-   }
-   .header{
-     padding: 0;
-   }
-   .nav-bar{
-     padding: 0 10;
-   }
-   p{
-     font-size:medium;
-   }
-   .intro{
-     font-size: large;
-   }
+  .menu-button {
+    display: block;
   }
+  .onheader {
+    display: none !important;
+  }
+  .header {
+    padding: 0;
+  }
+  .nav-bar {
+    padding: 0 10;
+  }
+  p {
+    font-size: medium;
+  }
+  .project {
+    font-size: large;
+  }
+  .intro {
+    font-size: large;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  p {
+    font-size: small;
+  }
+  .project {
+    font-size: medium;
+  }
+}
 
 .menu-img {
   width: 40px;
@@ -59,44 +80,39 @@
   height: 47px;
 }
 
-
-
-.hidden-menu
-{
-    height: 0vh;
-    opacity: 0;
-    pointer-events: none;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: space-between;
-    align-items: center;
-    transition: all 200ms ease-in-out;
-    z-index: 99;
+.hidden-menu {
+  height: 0vh;
+  opacity: 0;
+  pointer-events: none;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 200ms ease-in-out;
+  z-index: 99;
 }
 
-.not-hidden-menu{
-    opacity: 1;
-    pointer-events: all;
-    height: 100px;
+.not-hidden-menu {
+  opacity: 1;
+  pointer-events: all;
+  height: 100px;
 }
 
-.logo{
+.logo {
   width: auto;
   /* margin-right: auto; */
 }
 
-.header-items
-{
+.header-items {
   width: 70vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.item-project
-{
+.item-project {
   list-style: none;
   font-size: large;
   text-decoration: none;

@@ -48,8 +48,7 @@ a {
   width: 50%;
   position: absolute;
   height: 5px;
-  background-color: #7f5a83;
-  background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+  background-color: #ebcb608e;
   left: -50%;
   transition-duration: 300ms;
   transition-property: transform;
