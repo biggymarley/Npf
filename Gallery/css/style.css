@@ -28,14 +28,11 @@ body {
       color: wheat;
   }
 
-.sec{
-   margin-top: 50px;
-}
 
 .img{
    width: 600px;
    height: 1200px;
-   padding: 100px 0;
+   padding: 10px 0;
 }
 .splide__slide__container{
     display: flex;
