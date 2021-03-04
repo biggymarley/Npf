@@ -26,7 +26,7 @@
 }
 
 @media screen and (max-width: 1020px) {
-  .p {
+  p {
     font-size: medium;
   }
   .project {

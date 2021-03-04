@@ -5,7 +5,6 @@
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-
 .body {
   height: auto;
   background-color: #ee5522;
@@ -13,7 +12,6 @@
   background-attachment: fixed;
   background-size: cover;
 }
-
 
 a {
   color: black;
@@ -42,7 +40,6 @@ a {
 
 .project:hover + .line {
   transform: translateX(+150%);
-
 }
 .line {
   width: 50%;
@@ -54,8 +51,7 @@ a {
   transition-property: transform;
 }
 
-
-p{
+p {
   font-size: larger;
 }
 #contactme {
@@ -76,4 +72,33 @@ p{
   filter: drop-shadow(8px 8px 5px gray);
 }
 
+.tool {
+  position: relative;
+}
+.tooltxt {
+  pointer-events: none;
+  visibility: hidden;
+  width: auto;
+  background-color: rgba(0, 0, 0, 0.397);
+  color: #fff;
+  text-align: center;
+  left: -50%;
+  opacity: 0;
+  top: 20;
+  padding: 0 2px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  transition: all 200ms ease-in-out;
+}
+.tool:hover .tooltxt {
+  visibility: visible;
+  left: 60%;
+  opacity: 1;
+}
 
+.tool:hover .tooltxt.right {
+  visibility: visible;
+  left: 0;
+  opacity: 1;
+}
