@@ -3,5 +3,20 @@
 } */
 
 .container{
-    max-width: 1000px;
+    max-width: 1100px;
+}
+.cent{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.glass{
+    padding: 0 50px;
+    border-radius: 20px;
+    backdrop-filter: blur(1rem);
+    background-color: #f0652498;
 }

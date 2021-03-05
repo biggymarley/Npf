@@ -5,12 +5,14 @@
   font-family: "Proza Libre", sans-serif;
   z-index: 99;
   position: relative;
+  backdrop-filter: blur(1rem);
 }
 
 .nav-bar {
   position: absolute;
   height: 100%;
   width: 100%;
+  padding: 0 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -35,9 +37,17 @@
   .intro {
     font-size: large;
   }
+  .projectimg{
+    width: 70px;
+    height: 70px;
+  }
 }
 
 @media screen and (max-width: 720px) {
+  .projectimg{
+    width: 50px;
+    height: 50px;
+  }
   .menu-button {
     display: block;
   }
@@ -67,6 +77,10 @@
   }
   .project {
     font-size: medium;
+  }
+  .projectimg{
+    width: 40px;
+    height: 40px;
   }
 }
 
@@ -102,6 +116,7 @@
 
 .logo {
   width: auto;
+  padding-right: 50px;
   /* margin-right: auto; */
 }
 

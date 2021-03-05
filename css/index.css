@@ -60,7 +60,7 @@ p {
 #itemlists {
   display: inline-block;
 }
-#logo {
+.logo {
   width: 50px;
   height: 50px;
   margin: 10px;
@@ -68,9 +68,6 @@ p {
   transition-duration: 200ms;
 }
 
-#logo:hover {
-  filter: drop-shadow(8px 8px 5px gray);
-}
 
 .tool {
   position: relative;
@@ -101,4 +98,35 @@ p {
   visibility: visible;
   left: 0;
   opacity: 1;
+}
+
+
+.projectimg{
+  /* padding: 10 0; */
+  width: 90px;
+  height: 90px;
+}
+
+
+
+
+
+
+
+.languages{
+  padding-top: 100;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.inside{
+  justify-content: space-evenly !important;
+}
+
+.type{
+  width: 40%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
