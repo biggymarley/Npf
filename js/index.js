@@ -165,13 +165,15 @@ const allsections = new fullpage("#fullpage", {
   menu: "#menu",
   anchors: ["Home", "Ps", "Cme"],
   autoScrolling: true,
-  paddingTop: "100px",
-  paddingBottom: "100px",
+  // paddingTop: "100px",
+  paddingBottom: "120px",
   // controlArrows: true,
   navigation: true,
+  // fixedElements: '.header',
   animateAnchor: true,
   scrollHorizontally: true,
   controlArrows: true,
+  responsiveSlides: true,
   slidesNavigation: true,
 });
 

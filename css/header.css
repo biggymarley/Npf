@@ -1,11 +1,14 @@
 .header {
   width: 100%;
   padding: 0px 10px;
-  height: 100px;
+  height: 90px;
   font-family: "Proza Libre", sans-serif;
   z-index: 99;
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: relative;
-  backdrop-filter: blur(1rem);
+  /* backdrop-filter: blur(1rem); */
 }
 
 .nav-bar {
@@ -25,6 +28,10 @@
   background: transparent;
   border: none;
   outline: none;
+}
+
+p{
+  font-size: medium;
 }
 
 @media screen and (max-width: 1020px) {
@@ -115,8 +122,13 @@
 }
 
 .logo {
-  width: auto;
   padding-right: 50px;
+  width: auto;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  transition-property: filter;
+  transition-duration: 200ms;
   /* margin-right: auto; */
 }
 
