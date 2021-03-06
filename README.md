@@ -1,6 +1,6 @@
 # Npf
 
-scroll FW: https://alvarotrigo.com/fullPage/
+scroll library: https://alvarotrigo.com/fullPage/
 
 
 
