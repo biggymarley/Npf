@@ -43,7 +43,7 @@ align-items: center;
 
 .fp-prev {
   border: transparent;
-  background-image: url(/img/left.svg);
+  background-image: url(/Npf/img/left.svg);
   background-size: cover;
   width: 40px !important;
   height: 40px;
@@ -51,7 +51,7 @@ align-items: center;
 
 .fp-next {
   border: transparent;
-  background-image: url(/img/right.svg);
+  background-image: url(/Npf/img/right.svg);
   background-size: cover;
   width: 40px;
   height: 40px;
