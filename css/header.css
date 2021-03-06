@@ -1,14 +1,14 @@
 .header {
   width: 100%;
   padding: 0px 10px;
-  height: 90px;
+  height: 100px;
   font-family: "Proza Libre", sans-serif;
   z-index: 99;
     display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
-  /* backdrop-filter: blur(1rem); */
+  backdrop-filter: blur(2px);
 }
 
 .nav-bar {
@@ -51,6 +51,9 @@ p{
 }
 
 @media screen and (max-width: 720px) {
+  .languages{
+    padding-top: 0;
+  }
   .projectimg{
     width: 50px;
     height: 50px;

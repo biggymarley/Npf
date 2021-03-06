@@ -25,7 +25,8 @@ a {
 .projects {
   width: 100%;
   position: relative;
-  overflow: hidden;
+  overflow: auto;
+  height: 90%;
 }
 .project {
   display: block;
@@ -108,11 +109,12 @@ p {
 
 
 .languages{
-  padding-top: 100;
   width: 100%;
+  position: absolute;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  bottom: 0;
 }
 .inside{
   justify-content: space-evenly !important;
@@ -126,5 +128,5 @@ p {
 }
 #fullpage
 {
-  height: 100vh;
+  height: 90%;
 }
