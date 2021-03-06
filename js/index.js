@@ -11,6 +11,7 @@ const line = document.querySelectorAll(".line");
 const logo = document.querySelector("#logoname");
 const ball = document.querySelectorAll(".ball");
 const intro = document.querySelectorAll(".intro");
+const card = document.querySelector(".LI-profile-badge");
 const contactme = document.querySelector(".contact");
 
 const glass = document.querySelector(".glass");
@@ -67,7 +68,7 @@ const dark = () => {
   ball.forEach((e) => {
     if (e) e.classList.add("right");
   });
-
+  card.dataset.theme = 'dark';
   localStorage.setItem("mode", "light");
 };
 
@@ -111,6 +112,7 @@ const light = () => {
   ball.forEach((e) => {
     e.classList.remove("right");
   });
+  card.dataset.theme = 'light';
   localStorage.setItem("mode", "dark");
 };
 
