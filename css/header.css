@@ -54,7 +54,7 @@ p{
   display: flex;
   flex-direction: column;
   align-content: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   transition: all 200ms ease-in-out;
   z-index: 99;
@@ -63,6 +63,7 @@ p{
 .not-hidden-menu {
   opacity: 1;
   pointer-events: all;
+  background-color: rgba(0, 0, 255, 0.11);
   height: 100px;
 }
 
