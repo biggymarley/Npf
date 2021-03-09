@@ -140,3 +140,33 @@ Padding-bottom: 1vh;
 {
   height: 90%;
 }
+
+
+
+
+
+
+@keyframes rotating {
+  from {
+    -ms-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+  to {
+    -ms-transform: rotateY(360deg);
+    -moz-transform: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
+    -o-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
+}
+
+.tst{
+  -webkit-animation: rotating 6s linear infinite alternate;
+  -moz-animation:rotating 6s linear infinite alternate;
+  -ms-animation: rotating 6s linear infinite alternate;
+  -o-animation: rotating 6s linear infinite alternate;
+  animation: rotating 6s linear infinite alternate;
+}
