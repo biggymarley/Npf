@@ -145,7 +145,7 @@ Padding-bottom: 1vh;
 
 
 
-
+/* 
 @keyframes rotating {
   from {
     -ms-transform: rotateY(0deg);
@@ -169,4 +169,4 @@ Padding-bottom: 1vh;
   -ms-animation: rotating 6s linear infinite alternate;
   -o-animation: rotating 6s linear infinite alternate;
   animation: rotating 6s linear infinite alternate;
-}
+} */
