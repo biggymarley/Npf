@@ -58,7 +58,7 @@
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 576px) {
   .section {
     padding: 0 !important;
   }
