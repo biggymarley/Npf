@@ -145,6 +145,7 @@ Padding-bottom: 1vh;
 
 
 
+<<<<<<< HEAD
 /* 
 @keyframes rotating {
   from {
@@ -170,3 +171,14 @@ Padding-bottom: 1vh;
   -o-animation: rotating 6s linear infinite alternate;
   animation: rotating 6s linear infinite alternate;
 } */
+=======
+
+.tst{
+
+  transform: rotateZ(0deg);
+  transition:  transform 1s ease-out;
+}
+.tst:hover{
+  transform: rotatey(180deg);
+}
+>>>>>>> 1cd47b60bb4d2341ec5f3ffd534e6cf3ed8bf2f2
