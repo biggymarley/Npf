@@ -46,6 +46,12 @@
 }
 
 @media screen and (max-width: 520px) {
+  .section {
+    padding: 0 !important;
+  }
+  #fp-nav.fp-right {
+    opacity: 0;
+  }
   p {
     font-size: small;
   }
@@ -63,7 +69,8 @@
     padding: 0 !important;
   }
   #contactme{
-    height: 70%;
+    height: 100%;
+    width: 100%;
   }
   .cent{
     align-items: unset;

@@ -56,14 +56,26 @@ p {
   font-size: larger;
 }
 #contactme {
+  padding: 0px 50px;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  border-radius: 20px;
   width: auto;
-  height: 100%;
+  width: 300px;
+  height: 500px;
   display: flex;
   align-items: center;
   align-content: center;
   justify-content: space-evenly;
   flex-direction: column;
+  background-color: #f0652498;
+  backdrop-filter: blur(2px);
+
 }
+
+
+
 .contactlogo{
   padding: 0 !important;
 }
@@ -145,7 +157,7 @@ Padding-bottom: 1vh;
 
 
 
-
+/* 
 @keyframes rotating {
   from {
     -ms-transform: rotateY(0deg);
@@ -169,4 +181,4 @@ Padding-bottom: 1vh;
   -ms-animation: rotating 6s linear infinite alternate;
   -o-animation: rotating 6s linear infinite alternate;
   animation: rotating 6s linear infinite alternate;
-}
+} */

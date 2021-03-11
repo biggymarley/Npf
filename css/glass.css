@@ -20,10 +20,11 @@
 
 
 .glass{
+    overflow: hidden;
     height: auto;
     padding: 0 50px;
     border-radius: 20px;
-    /* backdrop-filter: blur(10px) !important; */
+    backdrop-filter: blur(2px) !important;
     background-color: #f0652498;
 }
 .projects{

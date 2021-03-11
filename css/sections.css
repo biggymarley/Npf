@@ -64,6 +64,7 @@ align-items: center;
 }
 
 .contact {
+  transform: translateZ(50px) !important;
   display: flex;
   width: 100%;
   justify-content: space-between;

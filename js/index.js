@@ -12,6 +12,7 @@ const logo = document.querySelector("#logoname");
 const ball = document.querySelectorAll(".ball");
 const intro = document.querySelectorAll(".intro");
 const contactme = document.querySelector(".contact");
+const contacttilt = document.querySelector("#contactme");
 
 const glass = document.querySelector(".glass");
 
@@ -35,6 +36,7 @@ const dark = () => {
     " #fp-nav > ul > li > a > span"
   );
   glass.classList.add('darkglass');
+  contacttilt.classList.add('darkglass');
   arrow.forEach((e) => {e.classList.add("darkcontact")});
   background.classList.add("darkbody");
   logo.classList.add("darklogo");
@@ -93,6 +95,7 @@ const light = () => {
   intro.forEach((e) => {
     e.classList.remove("darkintro");
   });
+  contacttilt.classList.remove('darkglass');
   background.classList.remove("darkbody");
   line.forEach((e) => {
     e.classList.remove("darkline");
@@ -178,7 +181,24 @@ const allsections = new fullpage("#fullpage", {
   slidesNavigation: true,
 });
 
+////////////////////////tilt Vanilla/////////////////////////////
+
+
+VanillaTilt.init(document.querySelector("#contactme"), {
+  max: 25,
+  speed: 400,
+  glare: true,
+  "max-glare": 0.5,
+});
+// VanillaTilt.init(document.querySelector(".glass"), {
+//   max: 25,
+//   speed: 400,
+//   glare: true,
+//   "max-glare": 0.5,
+// });
+
+//It also supports NodeList
+// VanillaTilt.init(document.querySelectorAll("#contactme"));
+
+
 /////////////////////////////////////////////////////
-
-
-
