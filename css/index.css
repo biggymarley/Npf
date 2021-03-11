@@ -157,6 +157,10 @@ Padding-bottom: 1vh;
 
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> e0a0eff023312c85d1ff126251421132d405a7f0
 /* 
 @keyframes rotating {
   from {
@@ -182,3 +186,17 @@ Padding-bottom: 1vh;
   -o-animation: rotating 6s linear infinite alternate;
   animation: rotating 6s linear infinite alternate;
 } */
+<<<<<<< HEAD
+=======
+=======
+
+.tst{
+
+  transform: rotateZ(0deg);
+  transition:  transform 1s ease-out;
+}
+.tst:hover{
+  transform: rotatey(180deg);
+}
+>>>>>>> 1cd47b60bb4d2341ec5f3ffd534e6cf3ed8bf2f2
+>>>>>>> e0a0eff023312c85d1ff126251421132d405a7f0
