@@ -136,15 +136,18 @@ if (darkmode !== "dark") {
 
 const menu_button = document.querySelector(".menu-button");
 const menu = document.querySelector(".hidden-menu");
+const menu_logo =  document.querySelector(".menu-img"); 
 
 const showmenu = () => {
   const checker = menu.dataset.checker;
   if (checker === "off") {
     menu.classList.add("not-hidden-menu");
     menu.dataset.checker = "on";
+    menu_logo.src = '/Npf/img/cross.png'
   } else {
     menu.classList.remove("not-hidden-menu");
     menu.dataset.checker = "off";
+    menu_logo.src = '/Npf/img/lmenu.svg'
   }
 };
 
@@ -162,6 +165,7 @@ click.forEach((e) => {
   e.addEventListener('click',  () => {
     menu.classList.remove("not-hidden-menu");
     menu.dataset.checker = "off";
+    menu_logo.src = '/Npf/img/lmenu.svg'
   })
 })
 
@@ -173,8 +177,10 @@ const mediachecker = (media) => {
   if (media.matches) {
     menu.classList.remove("not-hidden-menu");
     menu.dataset.checker = "on";
+    menu_logo.src = '/Npf/img/cross.png'
   } else {
     menu.dataset.checker = "off";
+    menu_logo.src = '/Npf/img/lmenu.svg'
   }
 };
 mediachecker(media);
@@ -186,11 +192,8 @@ const allsections = new fullpage("#fullpage", {
   menu: "#menu",
   anchors: ["Home", "Ps", "Cme"],
   autoScrolling: true,
-  // paddingTop: "100px",
   paddingBottom: "120px",
-  // controlArrows: true,
   navigation: true,
-  // fixedElements: '.header',
   animateAnchor: true,
   scrollHorizontally: true,
   controlArrows: true,

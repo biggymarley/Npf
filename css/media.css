@@ -71,6 +71,9 @@
 }
 
 @media screen and (max-width: 576px) {
+  .tool{
+    padding: 0;
+  }
   .section {
     padding: 0 !important;
   }
