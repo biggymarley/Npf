@@ -37,6 +37,7 @@
 flex-direction: column;
 align-content: space-between;
 align-items: center;
+
 }
 
 
@@ -60,11 +61,16 @@ align-items: center;
 }
 
 .link-and-line {
+  display: flex;
+  justify-content: center;
   width: 100%;
+}
+.up{
+  transform: translateZ(4rem) !important;
 }
 
 .contact {
-  transform: translateZ(50px) !important;
+ 
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -75,4 +81,8 @@ align-items: center;
 .s1{
   display: flex;
   justify-content: center;
+}
+
+.slide{
+  height: 100%;
 }

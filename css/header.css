@@ -4,12 +4,14 @@
   height: 100px;
   font-family: "Proza Libre", sans-serif;
   z-index: 99;
-    display: flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
-  background-color: rgba(203, 255, 238, 0.144);
+  background-color: #f0652498;
   backdrop-filter: blur(10px);
+  transition: all 200ms ease-in-out;
+  box-shadow: 0px 0px 2px rgb(0, 0, 0);
 }
 
 .nav-bar {
@@ -31,10 +33,9 @@
   outline: none;
 }
 
-p{
+p {
   font-size: medium;
 }
-
 
 .menu-img {
   width: 40px;
@@ -47,7 +48,7 @@ p{
 }
 
 .hidden-menu {
-  height: 0vh;
+  height: 0;
   opacity: 0;
   pointer-events: none;
   width: 100%;
@@ -56,18 +57,19 @@ p{
   align-content: center;
   justify-content: space-evenly;
   align-items: center;
-  transition: height 0.3s ease;
-  z-index: 99;
- 
+  background-color: #f0652498;
+  transition: all 200ms ease-in-out;
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 0px 2px rgb(0, 0, 0) ;
 }
 
 .not-hidden-menu {
   opacity: 1;
+  z-index: 99;
   position: absolute;
   pointer-events: all;
-  height: 150px;
-  backdrop-filter: blur(10px);
-  background-color: rgba(203, 255, 238, 0.144);
+  height: 100%;
+  font-style: bold;
 }
 
 .logo {

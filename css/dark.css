@@ -23,9 +23,6 @@
   color: wheat;
 }
 
-.darkline {
-  background-color: #a984ad;
-}
 
 .darkcontact {
   filter: invert(1) hue-rotate(180deg);
@@ -38,6 +35,10 @@
 .darknav {
   background: rgb(207, 207, 207) !important;
 }
-.darkglass{
-  background-color: #3f436480  !important;
+.darkglass {
+  background-color: #3f436480 !important;
+  box-shadow: 0px 0px 8px rgb(255, 255, 255)  !important;
+}
+.darkprofile{
+  box-shadow: 0px 0px 8px rgb(255, 255, 255);
 }

@@ -7,12 +7,14 @@ const p = document.getElementsByTagName("p");
 const array_a = Array.from(a);
 const array_p = Array.from(p);
 const projectname = document.querySelectorAll(".project");
-const line = document.querySelectorAll(".line");
 const logo = document.querySelector("#logoname");
 const ball = document.querySelectorAll(".ball");
 const intro = document.querySelectorAll(".intro");
 const contactme = document.querySelector(".contact");
 const contacttilt = document.querySelector("#contactme");
+const header = document.querySelector(".header");
+const hiddenmenu = document.querySelector(".hidden-menu");
+const profile = document.querySelector(".profile");
 
 const glass = document.querySelector(".glass");
 
@@ -32,16 +34,18 @@ const dark = () => {
   const navslid = document.querySelectorAll(
     " .fp-slidesNav > ul > li > a > span"
   );
-  const rightnav = document.querySelectorAll(
-    " #fp-nav > ul > li > a > span"
-  );
-  glass.classList.add('darkglass');
-  contacttilt.classList.add('darkglass');
-  arrow.forEach((e) => {e.classList.add("darkcontact")});
+  const rightnav = document.querySelectorAll(" #fp-nav > ul > li > a > span");
+  glass.classList.add("darkglass");
+  header.classList.add("darkglass");
+  hiddenmenu.classList.add("darkglass");
+  contacttilt.classList.add("darkglass");
+  arrow.forEach((e) => {
+    e.classList.add("darkcontact");
+  });
   background.classList.add("darkbody");
   logo.classList.add("darklogo");
   contactme.classList.add("darkcontact");
- 
+  profile.classList.add("darkprofile");
   navslid.forEach((e) => {
     e.classList.add("darknav");
   });
@@ -54,9 +58,7 @@ const dark = () => {
   intro.forEach((e) => {
     e.classList.add("darkintro");
   });
-  line.forEach((e) => {
-    e.classList.add("darkline");
-  });
+
   array_a.forEach((e) => {
     e.classList.add("darktext");
   });
@@ -74,32 +76,33 @@ const dark = () => {
 };
 
 const light = () => {
+  profile.classList.remove("darkprofile");
   const arrow = document.querySelectorAll(".fp-controlArrow");
   const navslid = document.querySelectorAll(
     " .fp-slidesNav > ul > li > a > span"
   );
-  const rightnav = document.querySelectorAll(
-    " #fp-nav > ul > li > a > span"
-  );
+  const rightnav = document.querySelectorAll(" #fp-nav > ul > li > a > span");
+  header.classList.remove("darkglass");
   rightnav.forEach((e) => {
     e.classList.remove("darknav");
   });
-  arrow.forEach((e) => {e.classList.remove("darkcontact")});
-  glass.classList.remove('darkglass');
+  arrow.forEach((e) => {
+    e.classList.remove("darkcontact");
+  });
+  glass.classList.remove("darkglass");
   navslid.forEach((e) => {
     e.classList.remove("darknav");
   });
+  hiddenmenu.classList.remove("darkglass");
   projectname.forEach((e) => {
     e.classList.remove("darkprojectname");
   });
   intro.forEach((e) => {
     e.classList.remove("darkintro");
   });
-  contacttilt.classList.remove('darkglass');
+  contacttilt.classList.remove("darkglass");
   background.classList.remove("darkbody");
-  line.forEach((e) => {
-    e.classList.remove("darkline");
-  });
+
   array_a.forEach((e) => {
     e.classList.remove("darktext");
   });
@@ -149,6 +152,20 @@ menu_button.addEventListener("click", () => {
   showmenu();
 });
 
+
+
+/////////////hide-menu if click to href//////////
+
+const click = document.querySelectorAll(".click");
+
+click.forEach((e) => {
+  e.addEventListener('click',  () => {
+    menu.classList.remove("not-hidden-menu");
+    menu.dataset.checker = "off";
+  })
+})
+
+
 ///////// hide menu if window big //////////
 
 const media = window.matchMedia("(min-width: 720px)");
@@ -183,22 +200,11 @@ const allsections = new fullpage("#fullpage", {
 
 ////////////////////////tilt Vanilla/////////////////////////////
 
-
 VanillaTilt.init(document.querySelector("#contactme"), {
   max: 25,
   speed: 400,
   glare: true,
   "max-glare": 0.5,
 });
-// VanillaTilt.init(document.querySelector(".glass"), {
-//   max: 25,
-//   speed: 400,
-//   glare: true,
-//   "max-glare": 0.5,
-// });
-
-//It also supports NodeList
-// VanillaTilt.init(document.querySelectorAll("#contactme"));
-
 
 /////////////////////////////////////////////////////

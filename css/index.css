@@ -25,10 +25,10 @@ a {
 .projects {
   width: 100%;
   position: relative;
-  overflow: auto;
-  height: 90%;
+  transform: translateZ(100px);
 }
 .project {
+  width: fit-content;
   display: block;
   padding: 10px;
   font-family: 'Orbitron', sans-serif;
@@ -39,41 +39,31 @@ a {
   border-radius: 20px;
 }
 
-.project:hover + .line {
-  transform: translateX(+150%);
-}
-.line {
-  width: 50%;
-  position: absolute;
-  height: 5px;
-  background-color: #ebcb608e;
-  left: -50%;
-  transition-duration: 300ms;
-  transition-property: transform;
-}
-
 p {
   font-size: larger;
 }
 #contactme {
   padding: 0px 50px;
-  overflow: hidden;
   transform-style: preserve-3d;
-  transform: perspective(1000px);
+  transform: perspective(2000px);
   border-radius: 20px;
-  width: auto;
-  width: 300px;
-  height: 500px;
+  width: 300px ;
+  height: 500px  ;
+  max-height: 500px ;
+  max-width: 300px ;
   display: flex;
   align-items: center;
   align-content: center;
   justify-content: space-evenly;
   flex-direction: column;
   background-color: #f0652498;
-  backdrop-filter: blur(2px);
+  box-shadow: 0px 0px 10px rgb(0, 0, 0);
 
 }
-
+.js-tilt-glare
+{
+  border-radius: 20px;
+}
 
 
 .contactlogo{
@@ -137,6 +127,7 @@ Padding-bottom: 1vh;
   justify-content: space-between;
   align-items: center;
   bottom: 0;
+  padding-bottom: 20px;
 }
 .inside{
   justify-content: space-evenly !important;
@@ -148,55 +139,32 @@ Padding-bottom: 1vh;
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
-#fullpage
+
+
+.profile{
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 8px rgb(0, 0, 0);
+  transition:  box-shadow 300ms ease-in-out;
+}
+.profile:hover{
+  box-shadow: 0px 0px 50px;
+}
+
+.shadow{
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0.7;
+  left: 0;
+  /* color: rgb(255, 255, 255); */
+  filter: blur(4px);
+}
+.shadoweffect
 {
-  height: 90%;
+  width: 100%;
+  position: relative;
 }
 
 
-
-
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> e0a0eff023312c85d1ff126251421132d405a7f0
-/* 
-@keyframes rotating {
-  from {
-    -ms-transform: rotateY(0deg);
-    -moz-transform: rotateY(0deg);
-    -webkit-transform: rotateY(0deg);
-    -o-transform: rotateY(0deg);
-    transform: rotateY(0deg);
-  }
-  to {
-    -ms-transform: rotateY(360deg);
-    -moz-transform: rotateY(360deg);
-    -webkit-transform: rotateY(360deg);
-    -o-transform: rotateY(360deg);
-    transform: rotateY(360deg);
-  }
-}
-
-.tst{
-  -webkit-animation: rotating 6s linear infinite alternate;
-  -moz-animation:rotating 6s linear infinite alternate;
-  -ms-animation: rotating 6s linear infinite alternate;
-  -o-animation: rotating 6s linear infinite alternate;
-  animation: rotating 6s linear infinite alternate;
-} */
-<<<<<<< HEAD
-=======
-=======
-
-.tst{
-
-  transform: rotateZ(0deg);
-  transition:  transform 1s ease-out;
-}
-.tst:hover{
-  transform: rotatey(180deg);
-}
->>>>>>> 1cd47b60bb4d2341ec5f3ffd534e6cf3ed8bf2f2
->>>>>>> e0a0eff023312c85d1ff126251421132d405a7f0
