@@ -1,0 +1,107 @@
+
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>`substitute(Filename('', 'Page itle'), '^.', '\u&', '')`</title>
+      <style type="text/css" media="all">
+            *{
+            padding: 0;
+            margin: 0;
+        }
+             body{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            
+        }
+        
+            .loading{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            position: absolute;
+            background-color: gray;
+            transition: all 3000ms ease;
+        
+            }
+            .web{
+             position: absolute;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            left: -100%;
+            transition: all 3000ms ease;
+            }
+            .img
+            {
+                width: 200px;
+                height: 200px;
+                
+            }
+            @keyframes animate {
+                0% { color: black;
+                    content : 'Web Dev';}
+                25% {color :gray;}
+                50% {content : 'Problem solver';
+                    color: black;
+                }
+                75% {color :gray;}
+                100% {color: black;
+                    content : 'Designer'
+                }
+                125%{
+                    color: gray;
+                }
+            }
+            .skills::after{
+                content: '';
+                animation: animate 2s linear 0s infinite ;
+            }
+            .skills{
+                position: absolute;
+                right: 2;
+            }
+            .welcom{
+                position: relative;
+                width: auto;
+            }
+            .site{
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="loading">
+            <div class="welcom">
+            <h1>Faragi Ayoub</h1>
+            <h3 class="skills"></h3>
+            </div>
+        </div>
+        <div class="web">
+            <object type="text/html" class="site" data="https://biggymarley.github.io/Npf/"></object>
+        </div>
+     
+    </body>
+    <script type="text/javascript" charset="utf-8">
+        const loading = document.querySelector(".loading");
+const website = document.querySelector(".web");
+        window.addEventListener("load", () => {
+          
+                    setTimeout(() => {
+               website.style.display = "flex";
+               website.style.opacity = 1;
+               loading.style.opacity = 0;
+               website.style.left = 0;
+                loading.style.left = "100%";
+           } ,1000);
+           setTimeout(() => {
+                loading.style.display = "none"
+           } ,4000);
+        });
+    </script>
+</html>
