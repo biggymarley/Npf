@@ -1,109 +1,207 @@
-
 <html>
-    <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="viewport" content="height=device-height, initial-scale=1.0" />
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <title>Loading test</title>
-      <style type="text/css" media="all">
-            *{
-            padding: 0;
-            margin: 0;
-        }
-             body{
-            width: 100%;
-            height: 100%;
-            position: relative;
-            
-        }
-        
-            .loading{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-            height: 100%;
-            width: 100%;
-            left: 0;
-            position: absolute;
-            background-color: gray;
-            transition: all 3000ms ease;
-        
-            }
-            .web{
-             position: absolute;
-            height: 100%;
-            width: 100%;
-            opacity: 0;
-            left: -100%;
-            transition: all 3000ms ease;
-            }
-            .img
-            {
-                width: 200px;
-                height: 200px;
-                
-            }
-            @keyframes animate {
-                0% { color: black;
-                    content : 'Web Dev';}
-                25% {color :gray;}
-                50% {content : 'Problem solver';
-                    color: black;
-                }
-                75% {color :gray;}
-                100% {color: black;
-                    content : 'Designer'
-                }
-                125%{
-                    color: gray;
-                }
-            }
-            .skills::after{
-                content: '';
-                animation: animate 2s linear 0s infinite ;
-            }
-            .skills{
-                position: absolute;
-                right: 2;
-            }
-            .welcom{
-                position: relative;
-                width: auto;
-            }
-            .site{
-                width: 100%;
-                height: 100%;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="loading">
-            <div class="welcom">
-            <h1>Faragi Ayoub</h1>
-            <h3 class="skills"></h3>
-            </div>
-        </div>
-        <div class="web">
-            <object type="text/html" class="site" data="https://biggymarley.github.io/Npf/"></object>
-        </div>
-     
-    </body>
-    <script type="text/javascript" charset="utf-8">
-        const loading = document.querySelector(".loading");
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>Loading system</title>
+  <style type="text/css" media="all">
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    body {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+
+    }
+    .ml12 {
+      padding-left: 10px;
+      font-weight: 200;
+      font-size: 1.8em;
+      text-transform: uppercase;
+      letter-spacing: 0.5em;
+    }
+
+    .ml12 .letter , .skills .letter2 {
+      display: inline-block;
+      line-height: 1em;
+    }
+    .loading {
+      display: flex;
+      pointer-events: none;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      overflow: hidden;
+      position: absolute;
+      background-color: lightblue;
+      transition: all 3000ms ease;
+    }
+    .web {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      overflow: hidden;
+      left: -100%;
+      transition: all 3000ms ease;
+    }
+    .img
+    {
+      width: 200px;
+      height: 200px;
+
+    }
+@keyframes rotate360 {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    .lobj {
+      animation: 2s rotate360 infinite linear;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+     background: linear-gradient(to top, #3acfd5 0%, #3a4ed5 100%);
+      position: absolute;
+      
+    }
+    .obj{
+      width: 100%;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      padding-top: 50px;
+    }
+      .lobj2 {
+      margin-left:0.5px ;
+      margin-top: 0.7px;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background-color: lightblue;
+      position: absolute;
+      
+    }
+
+  }
+  .welcom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+    align-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  .site {
+    width: 100%;
+    height: 100%;
+  }
+  .skills {
+  
+  }
+</style>
+</head>
+<body>
+<div class="loading">
+<div class="welcom">
+<h1 class="ml12">Faragi Ayoub</h1>
+<section class="obj">
+<div class="lobj">
+</div>
+<div class="lobj2">
+</div>
+</section>
+</div>
+
+</div>
+<div class="web">
+<object type="text/html" class="site" data="http://www.camagrubig.tk/"></object>
+</div>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+var textWrapper = document.querySelector('.ml12');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({
+loop: true
+})
+.add({
+targets: '.ml12 .letter',
+translateX: [40, 0],
+translateZ: 0,
+opacity: [0, 1],
+easing: "easeOutExpo",
+duration: 1200,
+delay: (el, i) => 500 + 30 * i
+}).add({
+targets: '.ml12 .letter',
+translateX: [0, -30],
+opacity: [1, 0],
+easing: "easeInExpo",
+duration: 1100,
+delay: (el, i) => 100 + 30 * i
+});
+
+const animating = (str) => {
+  
+  textWrapper.textContent = str;
+  textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+anime.timeline({
+loop: true
+})
+.add({
+targets: '.ml12 .letter',
+translateX: [40, 0],
+translateZ: 0,
+opacity: [0, 1],
+easing: "easeOutExpo",
+duration: 1200,
+delay: (el, i) => 500 + 30 * i
+}).add({
+targets: '.ml12 .letter',
+translateX: [0, -30],
+opacity: [1, 0],
+easing: "easeInExpo",
+duration: 1100,
+delay: (el, i) => 100 + 30 * i
+});
+};
+
+
+  const strings = ["Faragi Ayoub", "FrontEnd Dev", "BackEnd  Dev"];
+ var index = 0 ;
+ 
+setInterval(() => {
+  ++index;
+index %= strings.length;
+  animating(strings[index]);
+    console.log(index);
+  
+}, 4000);
+
+const loading = document.querySelector(".loading");
 const website = document.querySelector(".web");
-        window.addEventListener("load", () => {
-          
-                    setTimeout(() => {
-               website.style.display = "flex";
-               website.style.opacity = 1;
-               loading.style.opacity = 0;
-               website.style.left = 0;
-                loading.style.left = "100%";
-           } ,1000);
-           setTimeout(() => {
-                loading.style.display = "none"
-           } ,4000);
-        });
-    </script>
+window.addEventListener("load", () => {
+
+setTimeout(() => {
+website.style.display = "flex";
+website.style.opacity = 1;
+website.style.pointerEvents = "all"
+website.style.left = 0;
+loading.style.left = "100%";
+}, 1000);
+setTimeout(() => {
+loading.style.display = "none"
+}, 4000);
+});
+</script>
 </html>
