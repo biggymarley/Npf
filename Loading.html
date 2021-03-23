@@ -3,7 +3,8 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="viewport" content="height=device-height, initial-scale=1.0" />
-
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Train+One&display=swap" rel="stylesheet">
   <title>Loading system</title>
   <style type="text/css" media="all">
     * {
@@ -18,10 +19,12 @@
 
     }
     .ml12 {
+      font-family: 'Train One', cursive;
+      -webkit-font-smoothing: antialiased;
       color: white;
       padding-left: 10px;
       font-weight: 200;
-      font-size: 1.8em;
+      font-size: 1.5em;
       text-transform: uppercase;
       letter-spacing: 0.5em;
     }
@@ -141,7 +144,7 @@ var textWrapper = document.querySelector('.ml12');
 textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
 anime.timeline({
-loop: true
+loop: false
 })
 .add({
 targets: '.ml12 .letter',
@@ -165,7 +168,7 @@ const animating = (str) => {
   textWrapper.textContent = str;
   textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 anime.timeline({
-loop: true
+loop: false
 })
 .add({
 targets: '.ml12 .letter',
