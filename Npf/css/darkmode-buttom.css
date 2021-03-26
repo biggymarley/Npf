@@ -23,7 +23,7 @@
 .ball {
   background-color: transparent;
   background-size: 25px 25px;
-  background-image: url(/Npf/img/sun.svg);
+  background-image: url(/Npf/Npf/img/sun.svg);
   background-position: center;
   background-repeat: no-repeat;
   position: absolute;
@@ -43,7 +43,7 @@
 
 .right {
   left: 44px;
-  background-image: url(/Npf/img/moon.svg);
+  background-image: url(/Npf/Npf/img/moon.svg);
 }
 
 .darkp {
