@@ -49,6 +49,9 @@
   .intro , .shadow {
     font-size: large;
   }
+  .ml12{
+    font-size: 25px !important;
+  }
 }
 
 @media screen and (max-width: 520px) {
