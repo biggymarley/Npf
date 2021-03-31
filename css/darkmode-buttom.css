@@ -1,0 +1,51 @@
+.darkbutton-countainer {
+  margin: 0;
+  width: auto;
+  height: 30px;
+  position: relative;
+  list-style: none;
+  z-index: 99;
+  font-size: large;
+  align-self: center;
+}
+
+.toggle {
+  width: 75px;
+  height: 30px;
+  border-radius: 20px;
+  border: 1px solid;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  outline-style: none;
+  -webkit-appearance: none;
+  position: relative;
+  transition: all 400ms ease;
+}
+.ball {
+  background-color: transparent;
+  background-size: 25px 25px;
+  background-image: url("/Npf/img/sun.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 26px;
+  pointer-events: none;
+  height: 26px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  margin-left: 3px;
+  margin-top: 1.2px;
+  border-radius: 50%;
+  transition: all 200ms ease-in-out;
+}
+
+.right {
+  left: 44px;
+  background-image: url("/Npf/img/moon.svg");
+}
+
+.darkp {
+  color: wheat;
+}
