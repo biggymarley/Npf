@@ -84,6 +84,7 @@ p {
 
 .header-items {
   width: 40vw;
+  max-width:400px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -91,6 +92,6 @@ p {
 
 .item-project {
   list-style: none;
-  font-size: large;
+  font-size: 16px;
   text-decoration: none;
 }

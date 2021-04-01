@@ -11,7 +11,7 @@
   /* opacity: 0; */
   height: auto;
   background: none;
-  background-image: url("/Npf/img/s.svg");
+  background-image: url(../img/s.svg);
   background-attachment: fixed;
   background-size: cover;
   /* display: none; */

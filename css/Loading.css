@@ -29,7 +29,7 @@ body {
     left: 0;
     overflow: hidden;
     position: absolute;
-    background-color: #222831;
+    background-color: #2e3136;
     background-attachment: fixed;
     background-size: cover;
     transition: all 3000ms ease;
@@ -73,7 +73,7 @@ body {
     width: 46px;
     height: 46px;
     border-radius: 50%;
-    background-color: #222831;
+    background-color: #2e3136;
     background-attachment: fixed;
     position: absolute;
   }
