@@ -55,14 +55,13 @@ const animating = (str) => {
     });
 };
 
-const strings = ["Faragi Ayoub", "FrontEnd Dev", "C Programming"];
+const strings = ["FrontEnd Dev", "C Programming", "Faragi Ayoub"];
 var index = -1;
 
 setInterval(() => {
   ++index;
   index %= strings.length;
   animating(strings[index]);
-  console.log(index);
 }, 4000);
 
 const loading = document.querySelector(".loading");
