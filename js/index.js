@@ -21,11 +21,69 @@ const glass = document.querySelector(".glass");
 
 let darkmode = localStorage.getItem("mode");
 
+// VANTA.CLOUDS({
+//   el: ".body",
+//   mouseControls: true,
+//   touchControls: true,
+//   gyroControls: false,
+//   minHeight: 200.00,
+//   minWidth: 200.00,
+//   speed: 1
+// })
+
+
+const darkvanta = () => {
+  VANTA.CLOUDS({
+    el: ".body",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: true,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    skyColor: 0xa3f,
+  cloudColor: 0x9ebdee,
+  sunColor: 0xffffff,
+  sunGlareColor: 0x0,
+  sunlightColor: 0x0,
+    speed: 1
+  })
+  // VANTA.current.options.skyColor = 0xa3f;
+  // VANTA.current.options.cloudColor = 0x9ebdee;
+  // VANTA.current.options.sunColor = 0xffffff;
+  // VANTA.current.options.sunGlareColor = 0x0;
+  // VANTA.current.options.sunlightColor = 0x0;
+}
+const lightvanta = () => {
+  VANTA.CLOUDS({
+    el: ".body",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    speed: 1
+  })
+  // VANTA.current.options.skyColor = 6863063;
+  // VANTA.current.options.cloudColor = 11387358;
+  // VANTA.current.options.sunColor = 16750873;
+  // VANTA.current.options.sunGlareColor = 16737843;
+  // VANTA.current.options.sunlightColor = 16750899;
+  
+}
+
+
+
+
+
+
 const apply_mode = () => {
   darkmode = localStorage.getItem("mode");
   if (darkmode === "light") {
+    lightvanta();
     light();
+   
   } else {
+darkvanta();
     dark();
   }
 };
@@ -43,7 +101,7 @@ const dark = () => {
   arrow.forEach((e) => {
     e.classList.add("darkcontact");
   });
-  background.classList.add("darkbody");
+  // background.classList.add("darkbody");
   logo.classList.add("darklogo");
   contactme.classList.add("darkcontact");
   profile.classList.add("darkprofile");
@@ -105,7 +163,7 @@ const light = () => {
     e.classList.remove("darkintro");
   });
   contacttilt.classList.remove("darkglass");
-  background.classList.remove("darkbody");
+  // background.classList.remove("darkbody");
 
   array_a.forEach((e) => {
     e.classList.remove("darktext");
@@ -135,8 +193,11 @@ button.forEach((e) => {
 });
 
 if (darkmode !== "dark") {
+  darkvanta();
   dark();
 }
+else
+  lightvanta();
 /////////////////////////////////////////////////////
 
 //////////////////Responsive   Menu////////////////
@@ -213,7 +274,7 @@ const allsections = new fullpage("#fullpage", {
 VanillaTilt.init(document.querySelector("#contactme"), {
   max: 25,
   speed: 400,
-  glare: true,
+  glare: false,
   "max-glare": 0.5,
 });
 
