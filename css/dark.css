@@ -5,40 +5,38 @@
   background-size: cover;
 }
 .darklogo {
-  color: wheat;
+  color: #91aeff !important ;
 }
 .darktoggle {
   border: 1px solid wheat !important;
 }
-
 .darktext {
-  color: rgb(202, 202, 202);
+  color: #ffffff !important;
 }
 
 .darkp {
-  color: rgb(151, 151, 151);
+  color: rgb(151, 151, 151) !important;
 }
 
 .darkprojectname {
-  color: wheat;
+  color: #91aeff !important;
 }
-
 
 .darkcontact {
   filter: invert(1) hue-rotate(180deg);
 }
 
 .darkintro {
-  color: rgba(255, 255, 255, 0.76);
+  color: #bdcdfb !important;
 }
 
 .darknav {
   background: rgb(207, 207, 207) !important;
 }
 .darkglass {
-  background-color: #36363680 !important;
-  box-shadow: 0px 0px 8px rgb(255, 255, 255)  !important;
+  background-color: #18181880 !important;
+  box-shadow: 0px 0px 8px rgb(255, 255, 255) !important;
 }
-.darkprofile{
-  box-shadow: 0px 0px 8px rgb(255, 255, 255);
+.darkprofile {
+  box-shadow: 0px 0px 8px rgb(255, 255, 255) !important;
 }
