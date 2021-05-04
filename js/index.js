@@ -31,59 +31,58 @@ let darkmode = localStorage.getItem("mode");
 //   speed: 1
 // })
 
-
-const darkvanta = () => {
-  VANTA.CLOUDS({
-    el: ".body",
-    mouseControls: true,
-    touchControls: true,
-    gyroControls: true,
-    minHeight: 200.00,
-    minWidth: 200.00,
-    skyColor: 0xa3f,
+const darkvanta = VANTA.CLOUDS({
+  el: ".body",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.0,
+  minWidth: 200.0,
+  skyColor: 0xa3f,
   cloudColor: 0x9ebdee,
   sunColor: 0xffffff,
   sunGlareColor: 0x0,
   sunlightColor: 0x0,
-    speed: 1
+  speed: 1,
+});
+
+const lightvanta = VANTA.CLOUDS({
+  el: ".body",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.0,
+  minWidth: 200.0,
+  speed: 1,
+});
+
+const apply_light_vanta = () => {
+  lightvanta.setOptions({
+  skyColor: 0x68b8d7,
+  cloudColor: 0xadc1de,
+  sunColor: 0xff9919,
+  sunGlareColor: 0xff6633,
+  sunlightColor: 0xff9933
   })
-  // VANTA.current.options.skyColor = 0xa3f;
-  // VANTA.current.options.cloudColor = 0x9ebdee;
-  // VANTA.current.options.sunColor = 0xffffff;
-  // VANTA.current.options.sunGlareColor = 0x0;
-  // VANTA.current.options.sunlightColor = 0x0;
-}
-const lightvanta = () => {
-  VANTA.CLOUDS({
-    el: ".body",
-    mouseControls: true,
-    touchControls: true,
-    gyroControls: false,
-    minHeight: 200.00,
-    minWidth: 200.00,
-    speed: 1
+};
+
+const apply_dark_vanta = () => {
+  lightvanta.setOptions({
+    skyColor: 0xa3f,
+    cloudColor: 0x9ebdee,
+    sunColor: 0xffffff,
+    sunGlareColor: 0x0,
+    sunlightColor: 0x0
   })
-  // VANTA.current.options.skyColor = 6863063;
-  // VANTA.current.options.cloudColor = 11387358;
-  // VANTA.current.options.sunColor = 16750873;
-  // VANTA.current.options.sunGlareColor = 16737843;
-  // VANTA.current.options.sunlightColor = 16750899;
-  
-}
-
-
-
-
-
+};
 
 const apply_mode = () => {
   darkmode = localStorage.getItem("mode");
   if (darkmode === "light") {
-    lightvanta();
+    apply_light_vanta();
     light();
-   
   } else {
-darkvanta();
+    apply_dark_vanta();
     dark();
   }
 };
@@ -193,29 +192,27 @@ button.forEach((e) => {
 });
 
 if (darkmode !== "dark") {
-  darkvanta();
+  darkvanta;
   dark();
-}
-else
-  lightvanta();
+} else lightvanta;
 /////////////////////////////////////////////////////
 
 //////////////////Responsive   Menu////////////////
 
 const menu_button = document.querySelector(".menu-button");
 const menu = document.querySelector(".hidden-menu");
-const menu_logo =  document.querySelector(".menu-img"); 
+const menu_logo = document.querySelector(".menu-img");
 
 const showmenu = () => {
   const checker = menu.dataset.checker;
   if (checker === "off") {
     menu.classList.add("not-hidden-menu");
     menu.dataset.checker = "on";
-    menu_logo.src = 'img/cross.png'
+    menu_logo.src = "img/cross.png";
   } else {
     menu.classList.remove("not-hidden-menu");
     menu.dataset.checker = "off";
-    menu_logo.src = 'img/lmenu.svg'
+    menu_logo.src = "img/lmenu.svg";
   }
 };
 
@@ -223,20 +220,17 @@ menu_button.addEventListener("click", () => {
   showmenu();
 });
 
-
-
 /////////////hide-menu if click to href//////////
 
 const click = document.querySelectorAll(".click");
 
 click.forEach((e) => {
-  e.addEventListener('click',  () => {
+  e.addEventListener("click", () => {
     menu.classList.remove("not-hidden-menu");
     menu.dataset.checker = "off";
-    menu_logo.src = 'img/lmenu.svg'
-  })
-})
-
+    menu_logo.src = "img/lmenu.svg";
+  });
+});
 
 ///////// hide menu if window big //////////
 
@@ -245,10 +239,10 @@ const mediachecker = (media) => {
   if (media.matches) {
     menu.classList.remove("not-hidden-menu");
     menu.dataset.checker = "on";
-    menu_logo.src = 'img/cross.png'
+    menu_logo.src = "img/cross.png";
   } else {
     menu.dataset.checker = "off";
-    menu_logo.src = 'img/lmenu.svg'
+    menu_logo.src = "img/lmenu.svg";
   }
 };
 mediachecker(media);
@@ -279,4 +273,3 @@ VanillaTilt.init(document.querySelector("#contactme"), {
 });
 
 /////////////////////////////////////////////////////
-
