@@ -16,6 +16,7 @@ const contacttilt = document.querySelector("#contactme");
 const header = document.querySelector(".header");
 const hiddenmenu = document.querySelector(".hidden-menu");
 const profile = document.querySelector(".profile");
+const stars = document.querySelector(".stars");
 
 const glass = document.querySelector(".glass");
 
@@ -31,7 +32,7 @@ let darkmode = localStorage.getItem("mode");
 //   speed: 1
 // })
 
-const darkvanta = VANTA.CLOUDS({
+let darkvanta = VANTA.CLOUDS({
   el: ".body",
   mouseControls: true,
   touchControls: true,
@@ -46,7 +47,7 @@ const darkvanta = VANTA.CLOUDS({
   speed: 1,
 });
 
-const lightvanta = VANTA.CLOUDS({
+let lightvanta = VANTA.CLOUDS({
   el: ".body",
   mouseControls: true,
   touchControls: true,
@@ -132,7 +133,7 @@ const dark = () => {
   skills.forEach((e) => {
     if (e) e.classList.add("darkcontact");
   });
-
+  stars.style.opacity = 0.7;
   localStorage.setItem("mode", "light");
 };
 
@@ -181,7 +182,7 @@ const light = () => {
   skills.forEach((e) => {
     if (e) e.classList.remove("darkcontact");
   });
-
+  stars.style.opacity = 0;
   localStorage.setItem("mode", "dark");
 };
 
@@ -192,9 +193,9 @@ button.forEach((e) => {
 });
 
 if (darkmode !== "dark") {
-  darkvanta;
+  apply_dark_vanta();
   dark();
-} else lightvanta;
+} else apply_light_vanta();
 /////////////////////////////////////////////////////
 
 //////////////////Responsive   Menu////////////////
